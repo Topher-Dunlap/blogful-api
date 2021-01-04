@@ -25,14 +25,28 @@ app.get('/articles', (req, res, next) => {
         .catch(next)
 })
 
-app.get('/', (req, res) => {
-    res.send("Hello, world!")
+app.get('/articles/:article_id', (req, res, next) => {
+    const knexInstance = req.app.get('db')
+    ArticlesService.getById(knexInstance, req.params.article_id)
+        .then(article => {
+            if (!article) {
+                return res.status(404).json({
+                    error: { message: `Article doesn't exist` }
+                })
+            }
+            res.json(article)
+        })
+        .catch(next)
 })
+
+// app.get('/', (req, res) => {
+//     res.send("Hello, world!")
+// })
 
 app.use(function errorHandler(error, req, res, next) {
     let response
     if (NODE_ENV === 'production') {
-        response = {error: {message: 'server error'}}
+        response = {error: 'server error'}
     } else {
         console.error(error)
         response = {message: error.message, error}
@@ -40,26 +54,5 @@ app.use(function errorHandler(error, req, res, next) {
     res.status(500).json(response)
 })
 
-app.get('/articles/:article_id', (req, res, next) => {
-    ArticlesService.getById(
-        req.app.get('db'),
-        req.params.article_id
-    )
-        .then(articles => {
-            if (!article) {
-                return res.status(404).json({
-                    error: { message: `Article doesn't exist` }
-                })
-            }
-            res.json({
-                id: article.id,
-                title: article.title,
-                style: article.style,
-                content: article.content,
-                date_published: new Date(article.date_published),
-            })
-        })
-        .catch(next)
-})
 
 module.exports = app
