@@ -12,13 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c1f97f2b-40b5-4e2b-8465-b3574158f218" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/002.do.alter_article_style.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/002.do.alter_article_style.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/articles-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/articles/articles-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/articles-endpoints.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/articles-endpoints.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/articles.fixtures.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/articles.fixtures.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +135,8 @@
       <workItem from="1609463879759" duration="18789000" />
       <workItem from="1609730015799" duration="4508000" />
       <workItem from="1609737121729" duration="32414000" />
-      <workItem from="1610388726537" duration="12560000" />
+      <workItem from="1610388726537" duration="15175000" />
+      <workItem from="1610592336973" duration="3342000" />
     </task>
     <servers />
   </component>

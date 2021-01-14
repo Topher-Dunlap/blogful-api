@@ -19,7 +19,7 @@ app.use(helmet())
 app.use(cors())
 
 app.use('/api/users', usersRouter)
-app.use('/articles', articlesRouter)
+app.use('/api/articles', articlesRouter)
 app.use('/api/comments', commentsRouter)
 
 app.get('/', (req, res) => {
